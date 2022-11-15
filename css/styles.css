@@ -1,33 +1,6 @@
-:root {    
-    --bgnd-gray: #2F303A;
-    --bgnd-gray-main: rgba(47, 48, 58, 0.4);
-    --bgnd-light-blue: rgba(33, 150, 243, 0.9);
-    --bgnd-light-gray: #F5F4FA;
-    --black-color: #000;
-    --dark-gray: #212121;
-    --light-blue: #2196F3;
-    --light-blue-bord: rgba(33, 150, 243, 1);
-    --light-blue-select: #188CE8;
-    --light-gray: #757575;
-    --light-gray-bord: rgba(255, 255, 255, 0.3);   
-    --selection-color: #2196F3;
-    --white-color: #FFF;
-    --white-bord: #ECECEC;
-    --white-bord-menu: #EEEEEE;
-    /* logo color */
-    --logo-black: #000;
-    --logo-light-blue: #2196F3;
-    --logo-white: #FFF;
-    /* icon color */
-    --icon-dark: rgba(255, 255, 255, 0.1);
-    --icon-gray: #AFB1B8;
-    --icon-white: #fff;
-    /* animation */
-    --time: 250ms;
-    --time-effect: cubic-bezier(0.4, 0, 0.2, 1);
-}
+
 body {    
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--font-roboto);
     color: var(--light-gray);        
 }
 h1, h2, h3, p {
@@ -107,7 +80,7 @@ input {
 
 /* logo */
 .logo {     
-    font-family: 'Raleway';    
+    font-family: var(--font-raleway);    
     font-weight: 700;
     font-size: 26px;
     line-height: 1.1923;
@@ -207,7 +180,7 @@ input {
 .hero--container {
     padding-top: 200px;
     padding-bottom: 200px;
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/bgnd-head.jpg);
+    background-image: linear-gradient(to right, var(--bgnd-gray-main), var(--bgnd-gray-main)), url(../img/bgnd-head.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
@@ -228,12 +201,12 @@ input {
     margin-right: auto;
 }
 .btn--hero {
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--font-roboto);
     font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
     letter-spacing: 0.06em;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 4px 4px var(--dark-shadow);
     border-radius: 4px;
     color: var(--white-color);
     background-color: var(--light-blue);
@@ -519,7 +492,7 @@ input {
     width: 358px;
     height: 50px;
     border: 1px solid var(--light-gray-bord);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    filter: drop-shadow(0px 4px 4px var(--dark-shadow));
     border-radius: 4px;
     background-color: var(--bgnd-gray);
     padding: 15px 16px;
@@ -543,7 +516,7 @@ input {
     color: var(--white-color);
     fill: var(--white-color);
     background-color: var(--light-blue);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 4px 4px var(--dark-shadow);
     border-radius: 4px;
     border: none;
 }
@@ -567,7 +540,7 @@ input {
 }
 .modal-form__input {
     height: 40px;
-    border: 1px solid rgba(33, 33, 33, 0.2);
+    border: 1px solid var(--shadow-bord);
     border-radius: 4px;
     padding: 12px 12px 12px 42px;
     color: var(--dark-gray);
@@ -597,15 +570,6 @@ input {
     left: 12px;
     transition: fill var(--time) var(--time-effect);
 }
-/* .form-textarea-div {
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
-    margin-top: 4px;
-    transition: border var(--time) var(--time-effect);
-} */
-/* .form-textarea-div:focus-within {
-    outline: 1px solid var(--light-blue-bord);
-} */
 .modal-form__textarea:hover, .modal-form__textarea:focus,
 .modal-form__input:hover, .modal-form__input:focus {
     border: 1px solid var(--light-blue-bord);
@@ -614,7 +578,7 @@ input {
     fill: var(--selection-color);
 }
 .modal-form__textarea {
-    border: 1px solid rgba(33, 33, 33, 0.2);
+    border: 1px solid var(--shadow-bord);
     border-radius: 4px;
     margin-top: 4px;
     transition: border var(--time) var(--time-effect);
@@ -693,7 +657,7 @@ input {
     letter-spacing: 0.06em;
     color: var(--white-color);
     background: var(--light-blue);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 4px 4px var(--dark-shadow);
     border-radius: 4px;
     padding: 10px 52px;
     border: none;
@@ -702,7 +666,7 @@ input {
 .btn--modal-form:hover, .btn--modal-form:focus {
     background-color: var(--light-blue-select);
     color: var(--white-color);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 4px 4px var(--dark-shadow);
     border-radius: 4px;
 }
 
@@ -767,7 +731,7 @@ input {
     margin-right: 8px;
 }
 .btn--link-filter {
-    font-family: 'Roboto', sans-serif;        
+    font-family: var(--font-roboto);        
     font-weight: 500;
     font-size: 16px;
     line-height: 1.625;
